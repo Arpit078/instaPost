@@ -2,7 +2,7 @@ import postCreate from "./post_create/action.js"
 import cron from 'node-cron';
 import express from "express"
 // Run program at 3pm and 8pm
-cron.schedule('0 9,15 * * *', () => {
+cron.schedule('0 12,17 * * *', () => {
     postCreate()
 });
 
@@ -11,7 +11,7 @@ cron.schedule('0 9,15 * * *', () => {
 const url = `https://post-create.onrender.com/`
 cron.schedule('0 */14 * * * *', () => {
 
-axios.get(link_to_site, { 
+axios.get(url, { 
     headers: { "Accept-Encoding": "gzip,deflate,compress" } 
 })
     .then((req,res) => {console.log(`hit`)})
