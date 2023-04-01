@@ -2,7 +2,7 @@ import postCreate from "./post_create/action.js"
 import cron from 'node-cron';
 import express from "express"
 // Run program at 3pm and 8pm
-cron.schedule('0 3.5,20 * * *', () => {
+cron.schedule('0 9,15 * * *', () => {
     postCreate()
 });
 
