@@ -35,7 +35,7 @@ async function CreateImage(prompt_text){
 
             writeStream.on("finish", () => {
               writeStream.close();
-              // console.log("Download Completed!");
+              console.log("Download Completed!");
             })
             })
             return url
