@@ -1,5 +1,6 @@
 import postCreate from "./post_create/action.js"
 import cron from 'node-cron';
+import express from "express"
 // Run program at 3pm and 8pm
 cron.schedule('0 3.5,20 * * *', () => {
     postCreate()
@@ -19,3 +20,15 @@ axios.get(link_to_site, {
     })
 
 });
+
+const app = express()
+const PORT = process.env.PORT||5000
+app.get("/",(req,res)=>{
+    res.json(
+        `cron job is running! at ${PORT}`
+    )
+})
+
+app.listen(PORT,()=>{
+    console.log( `cron job is running! at ${PORT}`)
+})
