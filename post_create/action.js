@@ -10,7 +10,7 @@ function delay(time) {
  }
 
 async function postCreate(){
-const browser = await puppeteer.launch();
+const browser = await puppeteer.launch({headless:false});
 const page = await browser.newPage();
 
 await page.goto('https://instagram.com/',{ waitUntil: 'domcontentloaded' });
@@ -19,9 +19,9 @@ await page.setViewport({width: 400, height: 700});
 
     
 await delay(10000)
-await page.type('[name=username]', process.env.USERNAME);
+await page.type('[name=username]', process.env.USER);
 
-await page.type('[name=password]', process.env.PASSWORD);
+await page.type('[name=password]', process.env.PASS);
 
 await page.evaluate(()=>{
     document.querySelector("._acap").click()
@@ -76,3 +76,4 @@ await browser.close();
 }
 
 export default postCreate
+// postCreate()

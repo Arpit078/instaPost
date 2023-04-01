@@ -4,7 +4,7 @@ import express from "express"
 import axios from "axios"
 // Run program at 3pm and 8pm
 
-cron.schedule('5 14 * * *', () => {
+cron.schedule('40 14 * * *', () => {
     postCreate()
 });
 
