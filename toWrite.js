@@ -6,7 +6,7 @@ app.get("/",(req,res)=>{
   res.send("hello the server is running")
 })
 // Run the task every 4 hours
-const task = cron.schedule('0 */4 * * *', () => {
+const task = cron.schedule('0 */1 * * *', () => {
   // Perform your task here
     postCreate()
     console.log("posted")

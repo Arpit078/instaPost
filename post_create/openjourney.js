@@ -7,7 +7,7 @@ import genPrompt from "./prompts.js"
 import Replicate from "replicate";
 const replicate = new Replicate({
   // get your token from https://replicate.com/account
-  auth: "726dcda293dcd6eaaa3fe372e5712867547f46fb",
+  auth: "3a7926c042e08b0ddcb38708036a6e0e1c630c80",
 });
 
 function delay(time) {
@@ -53,7 +53,7 @@ async function CreateImage(prompt_text){
 
 
 // let prompt = await genPrompt()
-// let url = await CreateImage(prompt[0])
+// let url = await CreateImage("A comic with sensible story")
 // console.log(prompt)
 export default CreateImage
 

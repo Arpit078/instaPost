@@ -2,7 +2,7 @@ import axios from "axios"
 import cheerio from "cheerio"
 import { Configuration, OpenAIApi } from "openai"
 const configuration = new Configuration({
-  apiKey: "",
+  apiKey: "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",
 });
 const openai = new OpenAIApi(configuration);
 
