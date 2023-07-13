@@ -1,4 +1,4 @@
-# A bot that creates ai art and posts on an instagram page https://instagram.com/arpit078.dev
+# A bot that creates ai art and posts on an instagram page https://instagram.com/quotes24by7
 # planned changes : 
 - [ ] add better content instead of just digital art, better create a art piece inpired from recent news with added text using node libraries and copywriting by chatgpt.
 - [ ] add more error catching code and make error proof.
